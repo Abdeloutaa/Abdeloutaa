@@ -1,0 +1,29 @@
+import gym
+import avatar
+
+class FitnessAvatar(avatar.Avatar):
+    def __init__(self, name, gender, age, height, weight, fitness_goals):
+        super().__init__(name, gender, age, height, weight)
+        self.fitness_goals = fitness_goals
+
+    def train(self, gym_session):
+        if gym_session == "cardio":
+            self.do_cardio()
+        elif gym_session == "strength":
+            self.do_strength_training()
+        elif gym_session == "yoga":
+            self.do_yoga()
+        else:
+            raise ValueError("Invalid gym session type")
+
+    def do_cardio(self):
+        # Code for avatar to do cardio exercise
+        pass
+
+    def do_strength_training(self):
+        # Code for avatar to do strength training exercise
+        pass
+
+    def do_yoga(self):
+        # Code for avatar to do yoga exercise
+        pass
